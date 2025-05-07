@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nossas Fotos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd1dc);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #b30059;
+      margin-bottom: 30px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .form-container {
+      margin-top: 40px;
+      background: white;
+      border-radius: 30px;
+      padding: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border: 3px dashed #ffaad4;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 15px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 16px;
+      resize: none;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      background: #ff66a3;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff99cc;
+    }
+
+    .submit-btn:hover {
+      background: #ff3385;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nossas lembranças juntinhas, eu te amo nega 💕</h1>
+  <div class="galeria">
+    <!-- Substitua esses caminhos com suas imagens -->
+    <img src="foto1.jpg" alt="Foto 1">
+    <img src="foto2.jpg" alt="Foto 2">
+    <img src="fotos3.jpg" alt="Foto 3">
+  </div>
+
+  <div class="form-container">
+    <h2>Agora me diz oq vc achou da surpresinha 🥺</h2>
+    <form action="https://formsubmit.co/victoria2003gs@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nova mensagem da sua namorada 💌">
+      <input type="hidden" name="_autoresponse" value="Obrigada por me enviar um recadinho! ❤️">
+      <input type="hidden" name="_next" value="https://vickup-lab.github.io/parameuamor/obrigado.html">
+      <textarea name="mensagem" placeholder="Escreve algo aqui..."></textarea>
+      <button class="submit-btn" type="submit">Enviar 💌</button>
+    </form>
+    
+  </div>
+</body>
+</html>

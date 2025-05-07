@@ -1,0 +1,96 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  <meta charset="UTF-8">
+  <title>Para Minha Princesa 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe0f0, #ffc2d1);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #b30059;
+      text-align: center;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 10s infinite ease-in;
+    }
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .heart-button {
+      margin-top: 30px;
+      background: #ff66a3;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff99cc;
+      transition: transform 0.3s ease;
+    }
+    .heart-button:hover {
+      transform: scale(1.1);
+      background: #ff3385;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating hearts -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <h1>Oi meu amor... 💕</h1>
+  <p>Hoje é um dia muito especial e mesmo longe, eu quis te preparar algo com todo o meu coração.</p>
+  <p>Clique no coração abaixo para continuar!</p>
+  <a href="mensagem.html"><button class="heart-button">💖</button></a>
+</body>
+</html>
